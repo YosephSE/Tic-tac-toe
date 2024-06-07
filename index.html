@@ -2,32 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="shortcut icon" href="static/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="static/custom.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Tic Tac Toe</h1>
-        <h1><span id="currentPlayer">X</span></h1>
-        <div class="turn">
-            <div id="X" class="turnBox">X</div>
-            <div id="O" class="turnBox">O</div>
-        </div>
-        <div class="board" id="board">
-            <div class="cell" index="0"></div>
-            <div class="cell" index="1"></div>
-            <div class="cell" index="2"></div>
-            <div class="cell" index="3"></div>
-            <div class="cell" index="4"></div>
-            <div class="cell" index="5"></div>
-            <div class="cell" index="6"></div>
-            <div class="cell" index="7"></div>
-            <div class="cell" index="8"></div>
-        </div>
-        <button id="restart">Restart Game</button>
+    <div class="turn-container">
+        <h3>Turn For:</h3>
+        <div class="turn-box align" id="turnX">X</div>
+        <div class="turn-box align" id="turnO">O</div>
+        <div class="bg"></div>
     </div>
-    <script src="static/main.js"></script>
+    <div class="main-grid">
+        <div class="box align"></div>
+        <div class="box align"></div>   
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+    </div>
+    <h2 id="results"></h2>
+    <button id="play-again">Play Again</button>
+    <button id="reset-game">Reset Game</button>
+    <script src="script.js"></script>
 </body>
 </html>
+
