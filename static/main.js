@@ -41,4 +41,9 @@ function cellClicked(){
     checkWinner();
 }
 
+function updateCell(cell, index){
+    board[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+}
+
 initializeGame();
