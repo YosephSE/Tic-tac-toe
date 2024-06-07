@@ -30,6 +30,7 @@ function restartGame(){
 }
 
 
+
 function cellClicked(){
     const index = this.getAttribute("index");
 
@@ -45,5 +46,6 @@ function updateCell(cell, index){
     board[index] = currentPlayer;
     cell.textContent = currentPlayer;
 }
+
 
 initializeGame();

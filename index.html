@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Tic Tac Toe</h1>
-        <div class="board" id="board">
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-        </div>
-        <button id="restartButton">Restart Game</button>
+    <div class="turn-container">
+        <h3>Turn For:</h3>
+        <div class="turn-box align" id="turnX">X</div>
+        <div class="turn-box align" id="turnO">O</div>
+        <div class="bg"></div>
     </div>
-    <script src="main.js"></script>
+    <div class="main-grid">
+        <div class="box align"></div>
+        <div class="box align"></div>   
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+        <div class="box align"></div>
+    </div>
+    <h2 id="results"></h2>
+    <button id="play-again">Play Again</button>
+    <button id="reset-game">Reset Game</button>
+    <script src="script.js"></script>
 </body>
 </html>
+
