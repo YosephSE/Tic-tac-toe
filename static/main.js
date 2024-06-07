@@ -16,14 +16,15 @@ let board = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
 
-initializeGame();
-
 function initializeGame(){
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
     statusText.textContent = `${currentPlayer}'s turn`;
     running = true;
 }
+
+
+
 function cellClicked(){
     const index = this.getAttribute("index");
 
@@ -34,14 +35,21 @@ function cellClicked(){
     updateCell(this, index);
     checkWinner();
 }
+
+
+
 function updateCell(cell, index){
     board[index] = currentPlayer;
     cell.textContent = currentPlayer;
 }
+
+
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
 }
+
+
 function checkWinner(){
     let roundWon = false;
 
@@ -72,6 +80,8 @@ function checkWinner(){
         changePlayer();
     }
 }
+
+
 function restartGame(){
     currentPlayer = "X";
     board = ["", "", "", "", "", "", "", "", ""];
@@ -79,3 +89,6 @@ function restartGame(){
     cells.forEach(cell => cell.textContent = "");
     running = true;
 }
+
+
+initializeGame();
