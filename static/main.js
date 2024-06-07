@@ -30,4 +30,22 @@ function restartGame(){
 }
 
 
+
+function cellClicked(){
+    const index = this.getAttribute("index");
+
+    if(board[index] != "" || !running){
+        return;
+    }
+
+    updateCell(this, index);
+    checkWinner();
+}
+
+function updateCell(cell, index){
+    board[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+}
+
+
 initializeGame();
