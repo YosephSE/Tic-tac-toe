@@ -28,7 +28,7 @@ function cellClicked() {
   const index = this.getAttribute("index");
 
   if (board[index] != "" || !running) {
-    return;
+    return
   }
 
   updateCell(this, index);
