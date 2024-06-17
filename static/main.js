@@ -89,14 +89,17 @@ function checkWinner() {
     running = false;
     if(currentPlayer === "X"){
       x_win++
+      document.getElementById("x").innerText = x_win;
     }else{
       o_win++
+      document.getElementById("o").innerText = o_win;
     }
   } else if (!board.includes("")) {
     resultDiv.textContent = `Draw!`;
     resultDiv.style.display = "block";
     running = false;
     draw++
+    document.getElementById("draw").innerText = draw;
   } else {
     resultDiv.style.display = "none";
     changePlayer();
