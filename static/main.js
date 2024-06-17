@@ -16,6 +16,9 @@ const winConditions = [
 let board = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
+let x_win = 0;
+let o_win = 0;
+let draw = 0;
 
 function initializeGame() {
   cells.forEach((cell) => cell.addEventListener("click", cellClicked));
@@ -84,10 +87,19 @@ function checkWinner() {
     resultDiv.textContent = `${currentPlayer} wins!`;
     resultDiv.style.display = "block";
     running = false;
+    if(currentPlayer === "X"){
+      x_win++
+      document.getElementById("x").innerText = x_win;
+    }else{
+      o_win++
+      document.getElementById("o").innerText = o_win;
+    }
   } else if (!board.includes("")) {
     resultDiv.textContent = `Draw!`;
     resultDiv.style.display = "block";
     running = false;
+    draw++
+    document.getElementById("draw").innerText = draw;
   } else {
     resultDiv.style.display = "none";
     changePlayer();
